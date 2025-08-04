@@ -3,6 +3,7 @@ let amigos = [];
 const ulLista = document.getElementById("listaAmigos");
 const ulResultado = document.getElementById("resultado");
 
+// agregar un amigo a la lista
 function agregarAmigo() {
     const input = document.getElementById("amigo");
     const nombre = input.value.trim();
@@ -19,6 +20,7 @@ function agregarAmigo() {
     ulResultado.innerHTML = "";
 }
 
+// mostrar la lista de amigos
 function mostrarLista() {
     ulLista.innerHTML = "";
 
@@ -29,6 +31,7 @@ function mostrarLista() {
     }
 }
 
+// sortear un amigo secreto
 function sortearAmigo() {
     if (amigos.length === 0) {
         alert("Debes añadir al menos un nombre antes de sortear.");
