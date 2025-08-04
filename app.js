@@ -18,3 +18,15 @@ function agregarAmigo() {
     input.focus();
     ulResultado.innerHTML = "";
 }
+
+function mostrarLista() {
+    ulLista.innerHTML = "";
+
+    for (let i = 0; i < amigos.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = `${i + 1}. ${amigos[i]}`;
+        ulLista.appendChild(li);
+    }
+}
+
+
