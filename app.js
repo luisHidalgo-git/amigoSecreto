@@ -13,12 +13,19 @@ function agregarAmigo() {
         return;
     }
 
+    const nombreValido = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(nombre);
+    if (!nombreValido) {
+        alert("Por favor, ingrese un nombre válido (solo letras y espacios).");
+        return;
+    }
+
     amigos.push(nombre);
     mostrarLista();
     input.value = "";
     input.focus();
     ulResultado.innerHTML = "";
 }
+
 
 // mostrar la lista de amigos
 function mostrarLista() {
