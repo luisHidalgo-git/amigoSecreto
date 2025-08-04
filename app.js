@@ -29,4 +29,14 @@ function mostrarLista() {
     }
 }
 
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("Debes añadir al menos un nombre antes de sortear.");
+        return;
+    }
 
+    const indice = Math.floor(Math.random() * amigos.length);
+    const nombreSorteado = amigos[indice];
+
+    ulResultado.innerHTML = `<li>🎉 ¡El amigo secreto es <strong>${nombreSorteado}</strong>!</li>`;
+}
